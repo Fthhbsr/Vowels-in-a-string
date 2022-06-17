@@ -1,19 +1,27 @@
-// const input = document.querySelector(".input");
+const input = document.querySelector(".input");
+const display = document.querySelector(".display");
 
-// document.querySelector(".button").addEventListener("click",(input)=>{
-// countWovels(input);
+document.querySelector("body").addEventListener("click", (event) => {
+  console.log("click");
+  if (event.target.classList.contains("btn")) {
+    countVowels(input.value);
+  }
+});
 
-// });
-let count;
-let word = "come on";
-let vowelArr = ["a", "e", "i", "o", "u"];
-const countWovels = (word) => {
-  count = word.split("").filter((w) => vowelArr.includes(w)).length;
+const countVowels = (word) => {
+  let vowelArr = ["a", "e", "i", "o", "u"];
+  let count = word
+    .lowercase()
+    .split("")
+    .filter((w) => vowelArr.includes(w)).length;
   console.log(count);
+  render(count);
 };
 
-countWovels(word);
-console.log(count);
+const render = (word) => {
+  display.innerHTML = `There are ${word} vovels in ${input.value}`;
+  console.log(word);
+};
 
 // const input = document.querySelector(".input");
 // const display = document.querySelector(".display");
