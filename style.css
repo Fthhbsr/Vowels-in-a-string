@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  background-color: rgb(196, 170, 170);
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +17,11 @@ input {
   font-size: 1.5rem;
 }
 
-form {
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 4rem;
   text-align: center;
 }
@@ -32,5 +36,5 @@ button {
 .display {
   color: lightblue;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
 }
